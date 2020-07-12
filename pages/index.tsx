@@ -3,26 +3,21 @@ import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
-import Post from '../types/post'
-import Header from "../components/header";
+import {Button, Spacer} from "@zeit-ui/react";
+import HomeCover from "../components/home-cover";
+import React from "react";
+import HomeAbout from "../components/home-about";
 
-type Props = {
-  allPosts: Post[]
-}
-
-const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+const Index = () => {
   return (
     <>
       <Layout>
         <Head>
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
-          <Header/>
-        <Container>
-         hello
-        </Container>
+        <HomeCover/>
+        <Spacer y={3}/>
+        <HomeAbout/>
       </Layout>
     </>
   )
