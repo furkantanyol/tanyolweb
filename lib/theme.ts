@@ -12,5 +12,5 @@ export default {
     font: {
         sans: '"Roboto"',
         mono: '"Open Sans"'
-    }
+    },
 };
