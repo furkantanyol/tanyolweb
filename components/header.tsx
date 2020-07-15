@@ -1,23 +1,24 @@
-import Link from 'next/link'
 import React from "react";
+import {Breadcrumbs, Text} from "@zeit-ui/react";
+import {Coffee, Home} from "@zeit-ui/react-icons";
+import {PATHS} from "../lib/constants";
+import Link from "./link";
 
 const Header = () => {
-  return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
-        <div className="pr-2">
-            <Link href="/">
-                <a className="hover:underline">Home</a>
+    return (
+        <Breadcrumbs size="large" separator=" ">
+            <Link href={PATHS.HOME}>
+                <Breadcrumbs.Item nextLink>
+                    <Home/><Text>Home</Text>
+                </Breadcrumbs.Item>
             </Link>
-            .
-        </div>
-        <div className="pr-2">
-            <Link href="/blog">
-                <a className="hover:underline">Blog</a>
+            <Link href={PATHS.BLOG}>
+                <Breadcrumbs.Item nextLink>
+                    <Coffee/><Text>Blog</Text>
+                </Breadcrumbs.Item>
             </Link>
-            .
-        </div>
-    </h2>
-  )
+        </Breadcrumbs>
+    )
 }
 
 export default Header

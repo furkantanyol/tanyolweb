@@ -1,0 +1,53 @@
+
+#__next h1 {
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+#__next h2 {
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+#__next h3 {
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+#__next p, dl, dt, dd {
+    font-family: "Open Sans";
+}
+
+#__next .home-cover-text {
+    padding: 16pt 16pt 16pt 80pt;
+}
+
+#__next nav p {
+    margin: 0;padding: 1rem 0;
+}
+
+#__next main {
+    padding: 0 0 calc(16pt * 2.5) 0;
+}
+
+@media screen and (max-width: 650px) {
+
+}
+
+@media screen and (max-width: 900px) {
+    #__next .home-cover-text {
+        padding: 16pt 16pt 16pt 16pt;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+}
+
+@media screen and (max-width: 1920px) {
+
+}
+
+@media screen and (max-width: 10000px) {
+
+}
