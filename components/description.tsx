@@ -1,21 +1,29 @@
-import React from 'react'
-import {Description as ZeitDescription, Spacer, useTheme} from "@zeit-ui/react";
+import React, { ReactElement, ReactNode } from "react";
+import { Description as ZeitDescription, Spacer } from "@zeit-ui/react";
 
 type DescriptionProps = {
-    title: React.ReactNode
-    content: React.ReactNode
-    x?: number
-    y?: number
-}
+  title: ReactNode;
+  content: ReactNode;
+  x?: number;
+  y?: number;
+};
 
-const Description = ({ title, content, x, y }: DescriptionProps) => {
-    const theme = useTheme()
-    return (
-        <>
-            <ZeitDescription className="custom-description" title={title} content={content} />
-            <Spacer x={x} y={y}/>
-        </>
-    )
-}
+const Description = ({
+  title,
+  content,
+  x,
+  y,
+}: DescriptionProps): ReactElement => {
+  return (
+    <>
+      <ZeitDescription
+        className="custom-description"
+        title={title}
+        content={content}
+      />
+      <Spacer x={x} y={y} />
+    </>
+  );
+};
 
-export default Description
+export default Description;

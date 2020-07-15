@@ -1,24 +1,48 @@
-import React from "react";
-import {Breadcrumbs, Text} from "@zeit-ui/react";
-import {Coffee, Home} from "@zeit-ui/react-icons";
-import {PATHS} from "../lib/constants";
-import Link from "./link";
+import React, { ReactElement } from "react";
+import { Breadcrumbs, useTheme } from "@zeit-ui/react";
+import { Coffee, Home } from "@zeit-ui/react-icons";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { PATHS } from "../lib/constants";
 
-const Header = () => {
-    return (
-        <Breadcrumbs size="large" separator=" ">
-            <Link href={PATHS.HOME}>
-                <Breadcrumbs.Item nextLink>
-                    <Home/><Text>Home</Text>
-                </Breadcrumbs.Item>
-            </Link>
-            <Link href={PATHS.BLOG}>
-                <Breadcrumbs.Item nextLink>
-                    <Coffee/><Text>Blog</Text>
-                </Breadcrumbs.Item>
-            </Link>
-        </Breadcrumbs>
-    )
+function isLinkActive(pathname: string, href: string): boolean {
+  return pathname === href;
 }
 
-export default Header
+const Header = (): ReactElement => {
+  const { pathname } = useRouter();
+  const theme = useTheme();
+
+  return (
+    <Breadcrumbs size="medium" separator=" ">
+      <Link href={PATHS.HOME}>
+        <Breadcrumbs.Item
+          nextLink
+          style={{
+            color: isLinkActive(pathname, PATHS.HOME)
+              ? theme.palette.accents_8
+              : theme.palette.accents_4,
+          }}
+        >
+          <Home />
+          Home
+        </Breadcrumbs.Item>
+      </Link>
+      <Link href={PATHS.BLOG}>
+        <Breadcrumbs.Item
+          nextLink
+          style={{
+            color: isLinkActive(pathname, PATHS.BLOG)
+              ? theme.palette.accents_8
+              : theme.palette.accents_4,
+          }}
+        >
+          <Coffee />
+          Blog
+        </Breadcrumbs.Item>
+      </Link>
+    </Breadcrumbs>
+  );
+};
+
+export default Header;
