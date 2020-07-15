@@ -1,4 +1,4 @@
-import {Col, Text, Image, Row, useTheme, Grid, Page} from "@zeit-ui/react";
+import {Text, Image, useTheme, Grid} from "@zeit-ui/react";
 import React from "react";
 
 interface CoverTextProps {
@@ -14,8 +14,6 @@ const CoverText = ({children, ...rest}: CoverTextProps) => {
 }
 
 const HomeCover = () => {
-    const theme = useTheme()
-
     return (
         <div className="full-width bg-black">
             <Grid.Container>

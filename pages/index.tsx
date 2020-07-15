@@ -1,9 +1,8 @@
-import Container from '../components/container'
 import Layout from '../components/layout'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
-import {Button, Spacer} from "@zeit-ui/react";
+import {Spacer} from "@zeit-ui/react";
 import HomeCover from "../components/home-cover";
 import React from "react";
 import HomeAbout from "../components/home-about";
