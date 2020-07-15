@@ -1,17 +1,18 @@
-import Avatar from './avatar'
-import DateFormater from './date-formater'
-import CoverImage from './cover-image'
-import Link from 'next/link'
-import Author from '../types/author'
+import React, { ReactElement } from "react";
+import Link from "next/link";
+import Avatar from "./avatar";
+import DateFormater from "./date-formater";
+import CoverImage from "./cover-image";
+import Author from "../types/author";
 
 type Props = {
-  title: string
-  coverImage: string
-  date: string
-  excerpt: string
-  author: Author
-  slug: string
-}
+  title: string;
+  coverImage: string;
+  date: string;
+  excerpt: string;
+  author: Author;
+  slug: string;
+};
 
 const HeroPost = ({
   title,
@@ -20,7 +21,7 @@ const HeroPost = ({
   excerpt,
   author,
   slug,
-}: Props) => {
+}: Props): ReactElement => {
   return (
     <section>
       <div className="mb-8 md:mb-16">
@@ -30,7 +31,7 @@ const HeroPost = ({
         <div>
           <h3 className="mb-4 text-4xl lg:text-6xl leading-tight">
             <Link as={`/posts/${slug}`} href="/posts/[slug]">
-              <a className="hover:underline">{title}</a>
+              <a href="/posts/[slug]">{title}</a>
             </Link>
           </h3>
           <div className="mb-4 md:mb-0 text-lg">
@@ -43,7 +44,7 @@ const HeroPost = ({
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroPost
+export default HeroPost;

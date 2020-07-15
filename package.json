@@ -1,11 +1,18 @@
 {
-  "name": "blog-starter-typescript",
+  "name": "tanyolweb",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "format": "pretty-quick",
+    "lint": "tsc --noEmit && eslint . --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn format"
+    }
   },
   "dependencies": {
     "@zeit-ui/react": "^1.8.0-canary.4",
@@ -26,6 +33,21 @@
     "@types/node": "^14.0.1",
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
-    "postcss-preset-env": "^6.7.0"
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "eslint": "7.2.0",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-airbnb-typescript": "^8.0.2",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jest": "^23.18.0",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "4.0.0",
+    "husky": ">=4",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1"
   }
 }
