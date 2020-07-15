@@ -23,7 +23,7 @@ const HomeAbout = () => {
                 <Spacer y={1}/>
                 <Text h3>Technologies I'm Interested In</Text>
                 <Spacer y={2}/>
-                <Grid.Container>
+                <Grid.Container gap={2}>
                     <Grid xs={24} md={12}>
                         <Description y={1} title="JavaScript" content="prefer using ESNext features and functional programming paradigms"/>
                         <Description y={1} title="HTML, CSS" content="mobile first, cross-device, cross-browser"/>
@@ -38,7 +38,7 @@ const HomeAbout = () => {
                         <Description y={1} title="Jest" content="for testing, following TDD"/>
                         <Description y={1} title="Python" content={<span>mostly <b style={{fontWeight: 400}}>Django</b></span>}/>
                         <Description y={1} title="Postgres, MongoDB" content="database management, Rest & GraphQL API"/>
-                        <Description y={1} title="Docker, AWS" content="still exploring"/>
+                        <Description y={1} title="Docker, AWS" content="general knowledge of dev-ops"/>
                         <Description y={1} title="Git" content="and it's operations, for version control"/>
                         <Description y={1} title="Sketch" content="for web design, icons & illustrations"/>
                         <Description y={1} title="Jira, Trello" content="for project management"/>
