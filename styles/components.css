@@ -23,13 +23,13 @@
   align-items: center;
 }
 
-#__next .header-container.bg-black .breadcrumbs-link-active,
-#__next .header-container.bg-black .breadcrumbs-link:hover {
+#__next header.bg-black .header-container .breadcrumbs-link-active,
+#__next header.bg-black .header-container .breadcrumbs-link:hover {
   color: #fff;
 }
 
-#__next .header-container.bg-snow .breadcrumbs-link-active,
-#__next .header-container.bg-snow .breadcrumbs-link:hover {
+#__next header.bg-snow .header-container .breadcrumbs-link-active,
+#__next header.bg-snow .header-container .breadcrumbs-link:hover {
   color: #000;
 }
 

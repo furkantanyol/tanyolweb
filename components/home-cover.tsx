@@ -26,7 +26,7 @@ CoverText.defaultProps = {
 const HomeCover = (): ReactElement => {
   return (
     <div className="full-width bg-black">
-      <Grid.Container>
+      <Grid.Container className="max-screen">
         <Grid xs={24} md={12} className="flex-column-center home-cover-text">
           <CoverText h2>Hello I&apos;m</CoverText>
           <CoverText h1>Furkan Tanyol</CoverText>

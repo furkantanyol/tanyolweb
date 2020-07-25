@@ -11,6 +11,10 @@
   margin-right: -50vw;
 }
 
+.max-screen {
+
+}
+
 .flex-column-center {
   display: flex;
   flex-direction: column;
@@ -54,4 +58,11 @@
 }
 
 @media screen and (max-width: 10000px) {
+}
+
+@media screen and (min-width: 1600px) {
+    .max-screen {
+        max-width: 1600px;
+        margin: 0 auto !important;
+    }
 }

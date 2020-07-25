@@ -2,15 +2,13 @@ import React, { ReactElement } from "react";
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Head from "next/head";
-import Container from "../../components/container";
-import PostBody from "../../components/post-body";
-import PostHeader from "../../components/post-header";
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
-import PostTitle from "../../components/post-title";
-import { CMS_NAME } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
+import { Container, Text } from "@zeit-ui/react";
+import DateFormater from "../../components/date-formater";
+import markdownStyles from "../../components/markdown-styles.module.css";
 
 type Props = {
   post: PostType;
@@ -20,6 +18,7 @@ type Props = {
 
 const Post = ({ post, preview }: Props): ReactElement => {
   const router = useRouter();
+  const { title, date, coverImage, ogImage, author, content } = post;
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
@@ -27,23 +26,22 @@ const Post = ({ post, preview }: Props): ReactElement => {
     <Layout preview={preview}>
       <Container>
         {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
+          <Text h1>Loading</Text>
         ) : (
           <>
             <article className="mb-32">
               <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
-                <meta property="og:image" content={post.ogImage.url} />
+                <title>{title} | Furkan Tanyol Blog</title>
+                <meta property="og:image" content={ogImage.url} />
               </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
+              <Text h6 className="post-date">
+                <DateFormater dateString={date} />
+              </Text>
+              <Text h1>{title}</Text>
+              <div
+                className={markdownStyles.markdown}
+                dangerouslySetInnerHTML={{ __html: content }} // eslint-disable-line react/no-danger
               />
-              <PostBody content={post.content} />
             </article>
           </>
         )}
