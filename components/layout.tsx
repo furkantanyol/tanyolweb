@@ -13,15 +13,15 @@ const Layout = ({ children }: Props): ReactElement => {
   return (
     <>
       <Meta />
+      <Page.Header>
+        <Header />
+      </Page.Header>
       <Page>
-        <Page.Header>
-          <Header />
-        </Page.Header>
         <Page.Content>{children}</Page.Content>
-        <Page.Footer>
-          <Footer />
-        </Page.Footer>
       </Page>
+      <Page.Footer style={{ position: "relative" }}>
+        <Footer />
+      </Page.Footer>
     </>
   );
 };

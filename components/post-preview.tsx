@@ -1,5 +1,6 @@
 import React, { ReactElement } from "react";
 import Link from "next/link";
+import { Grid } from "@zeit-ui/react";
 import Avatar from "./avatar";
 import DateFormater from "./date-formater";
 import CoverImage from "./cover-image";
@@ -23,7 +24,7 @@ const PostPreview = ({
   slug,
 }: Props): ReactElement => {
   return (
-    <div>
+    <Grid xs={12}>
       <div className="mb-5">
         <CoverImage slug={slug} title={title} src={coverImage} />
       </div>
@@ -37,7 +38,7 @@ const PostPreview = ({
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
       <Avatar name={author.name} picture={author.picture} />
-    </div>
+    </Grid>
   );
 };
 

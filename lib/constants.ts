@@ -6,4 +6,10 @@ export const HOME_OG_IMAGE_URL =
 export const PATHS = {
   HOME: "/",
   BLOG: "/blog",
+  POSTS: "/posts",
+  INSTAGRAM: "https://instagram.com/furkantanyol",
+  TWITTER: "https://twitter.com/FurkanTanyol",
+  GITHUB: "https://github.com/furkantanyol",
+  LINKEDIN: "https://linkedin.com/in/furkan-tanyol/",
+  EMAIL: "mailto:furkantanyol@gmail.com",
 };

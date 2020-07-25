@@ -1,31 +1,105 @@
 #__next .custom-description dt {
-  font-weight: 600;
-  color: #000;
+    font-weight: 600;
+    color: #000;
 }
 
 #__next .custom-description dd {
-  font-weight: 300;
-  color: #000;
+    font-weight: 300;
+    color: #000;
+}
+
+#__next .home-cover-text {
+    padding: 16pt 16pt 16pt 80pt;
 }
 
 #__next .home-about-profile {
-  padding-right: 64pt;
+    padding-right: 64pt;
+}
+
+#__next .header-container {
+    padding: 16pt 80pt;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#__next .header-container.bg-black .breadcrumbs-link-active, #__next .header-container.bg-black .breadcrumbs-link:hover {
+    color: #fff;
+}
+
+#__next .header-container.bg-snow .breadcrumbs-link-active, #__next .header-container.bg-snow .breadcrumbs-link:hover {
+    color: #000;
 }
 
 #__next .header-link-selected {
-  color: #111;
+    color: #111;
 }
 
 #__next .header-link {
-  color: #888;
+    color: #888;
 }
+
+#__next .breadcrumbs-link {
+    color: #888;
+}
+
+#__next .breadcrumbs-link-active {
+    color: #111;
+}
+
+#__next .breadcrumbs-link:hover {
+    color: #111;
+}
+
+#__next .back-arrow, #__next .footer-link {
+    cursor: pointer;
+    color: #888;
+}
+
+#__next .back-arrow:hover, #__next .footer-link:hover {
+    color: #111;
+}
+
+#__next .post-container {
+    width: 100%;
+    margin: 1rem auto;
+}
+
+#__next .post {
+    box-shadow: none;
+}
+
+#__next .post:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+}
+
+#__next .post-title {
+    font-weight: 400;
+}
+
+#__next .post-excerpt {
+    font-weight: 300;
+    font-size: 1em;
+}
+
+#__next .post-date {
+    font-weight: 300;
+    color: #888;
+    margin: 0;
+}
+
 @media screen and (max-width: 650px) {
 }
 
 @media screen and (max-width: 900px) {
-  #__next .home-about-profile {
-    padding-right: 0;
-  }
+    #__next .home-about-profile {
+        padding-right: 0;
+    }
+
+    #__next .header-container {
+        padding: 16pt;
+    }
 }
 
 @media screen and (max-width: 1280px) {

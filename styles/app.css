@@ -18,10 +18,6 @@
     font-family: "Open Sans";
 }
 
-#__next .home-cover-text {
-    padding: 16pt 16pt 16pt 80pt;
-}
-
 #__next nav p {
     margin: 0;padding: 1rem 0;
 }
