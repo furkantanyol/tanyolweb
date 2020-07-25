@@ -17,14 +17,7 @@ type PostProps = {
   };
   content?: string;
 };
-const Post = ({
-  title,
-  coverImage,
-  date,
-  slug,
-  author,
-  excerpt,
-}: PostProps): ReactElement => {
+const Post = ({ title, date, slug, excerpt }: PostProps): ReactElement => {
   return (
     <Link href={`${PATHS.POSTS}/${slug}`}>
       <a href="/posts/[slug]">
