@@ -55,6 +55,8 @@
 
 #__next .back-arrow,
 #__next .footer-link {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   color: #888;
 }
@@ -93,7 +95,70 @@
   margin: 0;
 }
 
+#__next .resume-display {
+    margin: 0 auto;
+}
+
+#__next .resume-container {
+    padding: 40pt 80pt;
+}
+
+#__next .resume-contact-container {
+    padding: 1rem 0;
+}
+
+#__next .list-date-view-container {
+    padding: 1rem 0;
+}
+
+#__next .list-date-view-title {
+    font-weight: 300;
+}
+
+#__next .list-date-view-date {
+    text-align: right;
+    font-weight: 300;
+    font-size: 0.75em;
+    color: #888;
+    line-height: 22px;
+}
+
+#__next .list-date-view-list {
+    list-style-type: disc;
+}
+
+#__next .review-date {
+    text-align: right;
+    font-weight: 300;
+    color: #888;
+}
+
+#__next .review-author {
+    float: right;
+}
+
+#__next .review-card {
+    margin: 0.5rem 0;
+}
+
+#__next .review-card .content {
+    padding: 0.5rem 1rem;
+}
+
+#__next .stars-container {
+    display: flex;
+    align-items: center;
+}
+
+#__next .stars-container-rating {
+    padding-left: 0.5rem;
+    margin: 0.5rem 0;
+}
+
 @media screen and (max-width: 650px) {
+    #__next .resume-container {
+        padding: 16pt;
+    }
 }
 
 @media screen and (max-width: 900px) {

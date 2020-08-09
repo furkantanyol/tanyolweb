@@ -12,7 +12,7 @@ type HeaderProps = {
 };
 
 const Header = ({ activePathOptions }: HeaderProps): ReactElement => {
-  const { isHome, isBlog, isPosts } = activePathOptions;
+  const { isHome, isBlog, isPosts, isResume } = activePathOptions;
 
   const logo = isHome
     ? "assets/home/ft-logo.png"
@@ -20,7 +20,7 @@ const Header = ({ activePathOptions }: HeaderProps): ReactElement => {
 
   return (
     <Container className="header-container max-screen">
-      {isPosts ? (
+      {isPosts || isResume ? (
         <Link href={PATHS.BLOG}>
           <div className="back-arrow">
             <ArrowLeft size={30} />

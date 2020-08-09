@@ -29,7 +29,9 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "no-plusplus": "off",
     "linebreak-style": "off",
+    "react/no-array-index-key": "off",
     "react/jsx-props-no-spreading": "off",
     "prettier/prettier": [
       "error",

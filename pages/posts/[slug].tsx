@@ -2,11 +2,11 @@ import React, { ReactElement } from "react";
 import { useRouter } from "next/router";
 import ErrorPage from "next/error";
 import Head from "next/head";
+import { Container, Text } from "@zeit-ui/react";
 import Layout from "../../components/layout";
 import { getPostBySlug, getAllPosts } from "../../lib/api";
 import markdownToHtml from "../../lib/markdownToHtml";
 import PostType from "../../types/post";
-import { Container, Text } from "@zeit-ui/react";
 import DateFormater from "../../components/date-formater";
 import markdownStyles from "../../components/markdown-styles.module.css";
 
@@ -18,7 +18,7 @@ type Props = {
 
 const Post = ({ post, preview }: Props): ReactElement => {
   const router = useRouter();
-  const { title, date, coverImage, ogImage, author, content } = post;
+  const { title, date, ogImage, content } = post;
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }

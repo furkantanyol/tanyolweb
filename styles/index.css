@@ -11,10 +11,6 @@
   margin-right: -50vw;
 }
 
-.max-screen {
-
-}
-
 .flex-column-center {
   display: flex;
   flex-direction: column;
@@ -45,6 +41,10 @@
   border-radius: 0;
 }
 
+.text-center {
+    text-align: center;
+}
+
 @media screen and (max-width: 650px) {
 }
 
@@ -66,3 +66,5 @@
         margin: 0 auto !important;
     }
 }
+
+

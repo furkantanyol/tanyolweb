@@ -13,6 +13,12 @@
   font-size: 1.5rem;
 }
 
+#__next h4 {
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+
 #__next p,
 dl,
 dt,
@@ -27,6 +33,10 @@ dd {
 
 #__next main {
   padding: 0 0 calc(16pt * 2.5) 0;
+}
+
+#__next ul li:before {
+    display: none;
 }
 
 @media screen and (max-width: 650px) {

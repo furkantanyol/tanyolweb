@@ -7,9 +7,11 @@ export const PATHS = {
   HOME: "/",
   BLOG: "/blog",
   POSTS: "/posts",
+  RESUME: "/resume",
   INSTAGRAM: "https://instagram.com/furkantanyol",
   TWITTER: "https://twitter.com/FurkanTanyol",
   GITHUB: "https://github.com/furkantanyol",
   LINKEDIN: "https://linkedin.com/in/furkan-tanyol/",
   EMAIL: "mailto:furkantanyol@gmail.com",
+  PHONE: "tel:+61423062600",
 };

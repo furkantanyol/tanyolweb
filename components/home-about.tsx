@@ -1,6 +1,8 @@
 import React, { ReactElement } from "react";
-import { Text, Grid, Avatar, Spacer } from "@zeit-ui/react";
-import Description from "./description";
+import { Text, Grid, Avatar, Spacer, Button } from "@zeit-ui/react";
+import NextLink from "next/link";
+import { PATHS } from "../lib/constants";
+import Technologies from "./resume/technologies";
 
 const HomeAbout = (): ReactElement => {
   return (
@@ -24,121 +26,18 @@ const HomeAbout = (): ReactElement => {
             dedicated to deliver pixel perfect applications with great user
             experience.
           </Text>
+          <NextLink href={PATHS.RESUME}>
+            <Button ghost type="secondary">
+              Resume
+            </Button>
+          </NextLink>
         </div>
       </Grid>
       <Grid xs={24} md={12}>
         <Spacer y={1} />
         <Text h3>Technologies I&apos;m Interested In</Text>
         <Spacer y={2} />
-        <Grid.Container gap={2}>
-          <Grid xs={24} md={12}>
-            <Description
-              y={1}
-              title="JavaScript"
-              content="prefer using ESNext features and functional programming paradigms"
-            />
-            <Description
-              y={1}
-              title="HTML, CSS"
-              content="mobile first, cross-device, cross-browser"
-            />
-            <Description
-              y={1}
-              title="React"
-              content={
-                <span>
-                  for building user interface, along with{" "}
-                  <b style={{ fontWeight: 400 }}>Redux</b> for state management
-                </span>
-              }
-            />
-            <Description
-              y={1}
-              title="React Native"
-              content="for native mobile app development"
-            />
-            <Description
-              y={1}
-              title="TypeScript"
-              content="for static type-checking"
-            />
-            <Description
-              y={1}
-              title={
-                <span>
-                  Next
-                  <small style={{ fontSize: "0.75em", fontWeight: 600 }}>
-                    .js
-                  </small>
-                  , Gatsby
-                </span>
-              }
-              content="for server-side rendering and static site generation"
-            />
-            <Description
-              y={1}
-              title="Sass, Less, JSS"
-              content="for css pre-processing and optimization"
-            />
-          </Grid>
-          <Grid xs={24} md={12}>
-            <Description
-              y={1}
-              title={
-                <span>
-                  Node
-                  <small style={{ fontSize: "0.75em", fontWeight: 600 }}>
-                    .js
-                  </small>
-                </span>
-              }
-              content={
-                <span>
-                  with <b style={{ fontWeight: 400 }}>Express</b>
-                </span>
-              }
-            />
-            <Description
-              y={1}
-              title="Jest"
-              content="for testing, following TDD"
-            />
-            <Description
-              y={1}
-              title="Python"
-              content={
-                <span>
-                  mostly <b style={{ fontWeight: 400 }}>Django</b>
-                </span>
-              }
-            />
-            <Description
-              y={1}
-              title="Postgres, MongoDB"
-              content="database management, Rest & GraphQL API"
-            />
-            <Description
-              y={1}
-              title="Docker, AWS"
-              content="general knowledge of dev-ops"
-            />
-            <Description
-              y={1}
-              title="Git"
-              content="and it's operations, for version control"
-            />
-            <Description
-              y={1}
-              title="Sketch"
-              content="for web design, icons & illustrations"
-            />
-            <Description
-              y={1}
-              title="Jira, Trello"
-              content="for project management"
-            />
-          </Grid>
-        </Grid.Container>
+        <Technologies />
       </Grid>
     </Grid.Container>
   );

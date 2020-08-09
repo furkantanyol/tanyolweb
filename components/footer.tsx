@@ -8,45 +8,26 @@ import {
   Mail,
 } from "@zeit-ui/react-icons";
 import { PATHS } from "../lib/constants";
-
-type FooterLinkProps = {
-  icon: ReactElement;
-  href: string;
-  spaced?: boolean;
-  newTab?: boolean;
-};
-
-const FooterLink = ({
-  icon,
-  href,
-  spaced,
-  newTab,
-}: FooterLinkProps): ReactElement => {
-  return (
-    <Grid>
-      <a
-        className="footer-link"
-        {...(newTab && {
-          target: "_blank",
-          rel: "noopener noreferrer",
-        })}
-        href={href}
-      >
-        {icon}
-      </a>
-      {spaced && <Spacer x={2} />}
-    </Grid>
-  );
-};
+import ExternalLink from "./external-link";
 
 const Footer = (): ReactElement => {
   return (
     <Grid.Container justify="center">
-      <FooterLink icon={<Mail />} href={PATHS.EMAIL} spaced />
-      <FooterLink icon={<Github />} href={PATHS.GITHUB} spaced newTab />
-      <FooterLink icon={<Linkedin />} href={PATHS.LINKEDIN} spaced newTab />
-      <FooterLink icon={<Instagram />} href={PATHS.INSTAGRAM} spaced newTab />
-      <FooterLink icon={<Twitter />} href={PATHS.TWITTER} newTab />
+      <ExternalLink href={PATHS.EMAIL} spaced>
+        <Mail />
+      </ExternalLink>
+      <ExternalLink href={PATHS.GITHUB} spaced newTab>
+        <Github />
+      </ExternalLink>
+      <ExternalLink href={PATHS.LINKEDIN} spaced newTab>
+        <Linkedin />
+      </ExternalLink>
+      <ExternalLink href={PATHS.INSTAGRAM} spaced newTab>
+        <Instagram />
+      </ExternalLink>
+      <ExternalLink href={PATHS.TWITTER} newTab>
+        <Twitter />
+      </ExternalLink>
       <Spacer y={3} />
     </Grid.Container>
   );
