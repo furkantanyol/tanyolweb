@@ -14,10 +14,9 @@
 }
 
 #__next h4 {
-    font-weight: 400;
-    font-size: 1.25rem;
+  font-weight: 400;
+  font-size: 1.25rem;
 }
-
 
 #__next p,
 dl,
@@ -36,7 +35,7 @@ dd {
 }
 
 #__next ul li:before {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 650px) {
