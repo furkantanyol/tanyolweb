@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import Head from "next/head";
 import { Display, Grid, Text, Spacer, Button } from "@zeit-ui/react";
+import Printer from "@zeit-ui/react-icons/printer";
 import Layout from "../components/layout";
 import RESUME from "../lib/resume";
 import Contact from "../components/resume/contact";
@@ -8,7 +9,6 @@ import Section from "../components/resume/section";
 import ListItem from "../components/resume/list-item";
 import ReviewItem from "../components/resume/review-item";
 import Technologies from "../components/resume/technologies";
-import Printer from "@zeit-ui/react-icons/printer";
 
 function print() {
   if (window) window.print();

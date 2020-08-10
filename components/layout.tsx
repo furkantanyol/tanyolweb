@@ -37,7 +37,11 @@ const Layout = ({ children }: LayoutProps): ReactElement => {
       >
         <Header activePathOptions={activePathOptions} />
       </Page.Header>
-      <Page>
+      <Page
+        className={cn("page", {
+          "resume-page": isResume,
+        })}
+      >
         <Page.Content>{children}</Page.Content>
       </Page>
       <Page.Footer style={{ position: "relative" }}>

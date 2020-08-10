@@ -68,40 +68,39 @@
 }
 
 @media print {
+  body {
+    font-size: 14px;
+  }
 
-    body {
-        font-size: 14px;
-    }
+  section {
+    padding: 0 !important;
+    margin: -5rem 0 0 0 !important;
+    width: 100%;
+  }
 
-    section {
-        padding: 0 !important;
-        margin: -5rem 0 0 0 !important;
-        width: 100%;
-    }
+  #__next-prerender-indicator {
+    display: none;
+  }
 
-    #__next-prerender-indicator {
-        display: none;
-    }
+  .resume-container {
+    padding: 40pt !important;
+  }
 
-    .resume-container {
-        padding: 40pt !important;
-    }
+  .resume-display .content {
+    box-shadow: none !important;
+  }
 
-    .resume-display .content {
-        box-shadow: none !important;
-    }
+  .review-card {
+    box-shadow: none !important;
+    border: 1px solid #888 !important;
+  }
 
-    .review-card {
-        box-shadow: none !important;
-        border: 1px solid #888 !important;
-    }
+  header,
+  footer {
+    visibility: hidden;
+  }
 
-    header, footer {
-        visibility: hidden;
-    }
-
-    .print-button {
-        display: none !important;
-    }
-
+  .print-button {
+    display: none !important;
+  }
 }
