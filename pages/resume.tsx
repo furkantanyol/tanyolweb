@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import Head from "next/head";
-import { Display, Grid, Text, Spacer, Button } from "@zeit-ui/react";
-import Printer from "@zeit-ui/react-icons/printer";
+import { Display, Grid, Text, Spacer, Button } from "@geist-ui/react";
+import Printer from "@geist-ui/react-icons/printer";
 import Layout from "../components/layout";
 import RESUME from "../lib/resume";
 import Contact from "../components/resume/contact";

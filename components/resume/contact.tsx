@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
-import { Grid, Spacer } from "@zeit-ui/react";
-import { Github, Linkedin, Mail, Phone } from "@zeit-ui/react-icons";
+import { Grid, Spacer } from "@geist-ui/react";
+import { Github, Linkedin, Mail, Phone } from "@geist-ui/react-icons";
 import ExternalLink from "../external-link";
 import { PATHS } from "../../lib/constants";
 import RESUME from "../../lib/resume";

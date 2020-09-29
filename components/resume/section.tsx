@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Text } from "@zeit-ui/react";
+import { Text } from "@geist-ui/react";
 
 type SectionProps = {
   title: string;

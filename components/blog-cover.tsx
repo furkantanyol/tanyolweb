@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Image } from "@zeit-ui/react";
+import { Image } from "@geist-ui/react";
 
 const BlogCover = (): ReactElement => {
   return (

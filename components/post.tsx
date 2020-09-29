@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Text, Row, Card } from "@zeit-ui/react";
+import { Text, Row, Card } from "@geist-ui/react";
 import Link from "next/link";
 import Author from "../types/author";
 import { PATHS } from "../lib/constants";

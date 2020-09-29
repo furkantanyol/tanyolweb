@@ -1,9 +1,8 @@
 import React, { ReactElement } from "react";
-import { Breadcrumbs, Container } from "@zeit-ui/react";
-import { Coffee, Home } from "@zeit-ui/react-icons";
+import { Breadcrumbs, Container } from "@geist-ui/react";
+import { Coffee, Home, ArrowLeft } from "@geist-ui/react-icons";
 import Link from "next/link";
 import cn from "classnames";
-import ArrowLeft from "@zeit-ui/react-icons/arrowLeft";
 import { PATHS } from "../lib/constants";
 import { ActivePathOptions } from "../types";
 
@@ -21,7 +20,7 @@ const Header = ({ activePathOptions }: HeaderProps): ReactElement => {
   return (
     <Container className="header-container max-screen">
       {isPosts || isResume ? (
-        <Link href={PATHS.BLOG}>
+        <Link href={isPosts ? PATHS.BLOG : PATHS.HOME}>
           <div className="back-arrow">
             <ArrowLeft size={30} />
           </div>

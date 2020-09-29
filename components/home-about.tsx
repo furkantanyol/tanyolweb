@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Text, Grid, Avatar, Spacer, Button } from "@zeit-ui/react";
+import { Text, Grid, Avatar, Spacer, Button } from "@geist-ui/react";
 import NextLink from "next/link";
 import { PATHS } from "../lib/constants";
 import Technologies from "./resume/technologies";

@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Grid } from "@zeit-ui/react";
+import { Grid } from "@geist-ui/react";
 
 type ListItemProps = {
   title: string;

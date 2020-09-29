@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Text, Image, useTheme, Grid } from "@zeit-ui/react";
+import { Text, Image, useTheme, Grid } from "@geist-ui/react";
 
 interface CoverTextProps {
   h1?: boolean;

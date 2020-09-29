@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Page } from "@zeit-ui/react";
+import { Page } from "@geist-ui/react";
 import cn from "classnames";
 import { useRouter } from "next/router";
 import Footer from "./footer";

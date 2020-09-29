@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { AppProps } from "next/app";
 import "../styles/index.css";
-import { CssBaseline, ZeitProvider } from "@zeit-ui/react";
+import { CssBaseline, GeistProvider } from "@geist-ui/react";
 import theme from "../lib/theme";
 
 export default function MyApp({
@@ -9,9 +9,9 @@ export default function MyApp({
   pageProps,
 }: AppProps): ReactElement {
   return (
-    <ZeitProvider theme={theme}>
+    <GeistProvider theme={theme}>
       <CssBaseline />
       <Component {...pageProps} />
-    </ZeitProvider>
+    </GeistProvider>
   );
 }

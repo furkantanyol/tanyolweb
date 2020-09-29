@@ -7,7 +7,7 @@ import Document, {
   DocumentContext,
   DocumentInitialProps,
 } from "next/document";
-import { CssBaseline } from "@zeit-ui/react";
+import { CssBaseline } from "@geist-ui/react";
 
 interface MyDocumentProps extends DocumentInitialProps {
   styles: ReactElement;

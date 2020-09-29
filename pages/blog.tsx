@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import Head from "next/head";
-import { Grid, Spacer } from "@zeit-ui/react";
+import { Grid, Spacer } from "@geist-ui/react";
 import Layout from "../components/layout";
 import { getAllPosts, Items } from "../lib/api";
 import { CMS_NAME } from "../lib/constants";

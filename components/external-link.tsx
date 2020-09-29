@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
-import { Grid, Spacer } from "@zeit-ui/react";
-import { GridProps } from "@zeit-ui/react/dist/grid/grid";
+import { Grid, Spacer } from "@geist-ui/react";
+import { GridProps } from "@geist-ui/react/dist/grid/grid";
 
 type ExternalLinkProps = {
   children: ReactElement | ReactElement[] | Array<ReactElement | string>;

@@ -1,5 +1,5 @@
 import React, { ReactElement, ReactNode } from "react";
-import { Description as ZeitDescription, Spacer } from "@zeit-ui/react";
+import { Description as GeistDescription, Spacer } from "@geist-ui/react";
 
 type DescriptionProps = {
   title: ReactNode;
@@ -16,7 +16,7 @@ const Description = ({
 }: DescriptionProps): ReactElement => {
   return (
     <>
-      <ZeitDescription
+      <GeistDescription
         className="custom-description"
         title={title}
         content={content}

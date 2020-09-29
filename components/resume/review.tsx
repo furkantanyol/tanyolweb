@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import { Card, Grid, Text } from "@zeit-ui/react";
+import { Card, Grid, Text } from "@geist-ui/react";
 import Stars from "./stars";
 
 type ReviewProps = {

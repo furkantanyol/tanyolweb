@@ -1,12 +1,12 @@
 import React, { ReactElement } from "react";
-import { Grid, Spacer } from "@zeit-ui/react";
+import { Grid, Spacer } from "@geist-ui/react";
 import {
   Github,
   Instagram,
   Twitter,
   Linkedin,
   Mail,
-} from "@zeit-ui/react-icons";
+} from "@geist-ui/react-icons";
 import { PATHS } from "../lib/constants";
 import ExternalLink from "./external-link";
 
